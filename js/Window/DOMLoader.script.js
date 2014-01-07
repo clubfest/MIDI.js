@@ -39,7 +39,7 @@
 	});
 */
 
-if (typeof(DOMLoader) === "undefined") var DOMLoader = {};
+if (typeof(DOMLoader) === "undefined") DOMLoader = {};
 
 (function() { "use strict";
 

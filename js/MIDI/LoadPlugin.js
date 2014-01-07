@@ -12,7 +12,7 @@
 	});
 */
 
-if (typeof (MIDI) === "undefined") var MIDI = {};
+if (typeof (MIDI) === "undefined") MIDI = {};
 if (typeof (MIDI.Soundfont) === "undefined") MIDI.Soundfont = {};
 
 (function() { "use strict";

@@ -10,7 +10,7 @@
 	-------------------------------------
 */
 
-if (typeof(MIDI) === "undefined") var MIDI = {};
+if (typeof(MIDI) === "undefined") MIDI = {};
 
 (function() { "use strict";
 

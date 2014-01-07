@@ -8,7 +8,7 @@
 	-------------------------------------
 */
 
-if (typeof (MIDI) === "undefined") var MIDI = {};
+if (typeof (MIDI) === "undefined") MIDI = {};
 if (typeof (MIDI.Player) === "undefined") MIDI.Player = {};
 
 (function() { "use strict";
