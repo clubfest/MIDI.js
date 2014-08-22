@@ -98,7 +98,7 @@ connect.audiotag = function(filetype, instruments, conf) {
 		getNext: function(instrumentId) {
 			if (USE_XHR) {
 				DOMLoader.sendRequest({
-					url: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".jss",
+					url: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".js",
 					onprogress: getPercent,
 					onload: function (response) {
 						MIDI.Soundfont[instrumentId] = JSON.parse(response.responseText);
@@ -108,7 +108,7 @@ connect.audiotag = function(filetype, instruments, conf) {
 				});
 			} else {
 				DOMLoader.script.add({
-					src: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".jss",
+					src: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".js",
 					verify: "MIDI.Soundfont." + instrumentId,
 					callback: function() {
 						if (MIDI.loader) MIDI.loader.update(null, "Downloading...", 100);
@@ -131,7 +131,7 @@ connect.webaudio = function(filetype, instruments, conf) {
 		getNext: function(instrumentId) {
 			if (USE_XHR) {
 				DOMLoader.sendRequest({
-					url: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".jss",
+					url: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".js",
 					onprogress: getPercent,
 					onload: function(response) {
 						MIDI.Soundfont[instrumentId] = JSON.parse(response.responseText);
@@ -141,7 +141,7 @@ connect.webaudio = function(filetype, instruments, conf) {
 				});
 			} else {
 				DOMLoader.script.add({
-					src: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".jss",
+					src: MIDI.soundfontUrl + instrumentId + "-" + filetype + ".js",
 					verify: "MIDI.Soundfont." + instrumentId,
 					callback: function() {
 						if (MIDI.loader) MIDI.loader.update(null, "Downloading...", 100);
